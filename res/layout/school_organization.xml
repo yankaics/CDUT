@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/organization_department"
+            android:textColor="@color/blackgray"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_organization_party_committee_office"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_party_committee_office"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_party_membership_committee"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_party_membership_committee"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_discipline_inspection_office"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_discipline_inspection_office"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_school_party"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_school_party"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_organization_propaganda_department"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_propaganda_department"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_school_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_school_work"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_mental_health"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_mental_health"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_armed_forces"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_armed_forces"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_organization_school_union"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_school_union"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_school_committee"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_school_committee"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/organization_administration"
+            android:textColor="@color/blackgray"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_organization_headmaster_office"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_headmaster_office"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_student_affairs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_student_affairs"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_security_office"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_security_office"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_graduate_faculty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_graduate_faculty"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_organization_personnel_division"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_personnel_division"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_present_plan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_present_plan"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_acdemic_affairs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_acdemic_affairs"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_sience_department"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_sience_department"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_organization_editors_center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_editors_center"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_audit_division"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_audit_division"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_planing_office"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_planing_office"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_general_services"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_general_services"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_organization_lab_management"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_lab_management"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_external_cooperation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_external_cooperation"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_campus_planning"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_campus_planning"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_retired_office"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_retired_office"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/organization_academic_unit"
+            android:textColor="@color/blackgray"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_organization_graduate_school"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_graduate_school"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_earth_sciences"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_earth_sciences"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_energy_resources"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_energy_resources"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_environmental_civil_engineering"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_environmental_civil_engineering"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_organization_geophysical_institute"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_geophysical_institute"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_nuclear_technology"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_nuclear_technology"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_materials_chemical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_materials_chemical"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_administrative_science"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_administrative_science"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_organization_politics"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_politics"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_grammar_shcool"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_grammar_shcool"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_foreign_college"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_foreign_college"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_business_college"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_business_college"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_organization_institute_science_art"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_institute_science_art"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_physical_education"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_physical_education"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_information_science"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_information_science"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_tourism"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_tourism"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_organization_sedimentary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_sedimentary"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_continuing_education"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_continuing_education"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_leshan_engineering"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_leshan_engineering"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/organization_research"
+            android:textColor="@color/blackgray"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_organization_national_research_geological"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_national_research_geological"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_disaster_prevention"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_disaster_prevention"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_geological_survey"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_geological_survey"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical" />
+            </LinearLayout>
+            
+            
+        </LinearLayout>
+        
+         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/organization_auxiliary_department"
+            android:textColor="@color/blackgray"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_organization_library"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_library"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_archives"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_archives"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_museum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_museum"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_infirmary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_infirmary"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            
+            
+        </LinearLayout>
+        
+        
+         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/organization_other_units"
+            android:textColor="@color/blackgray"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_organization_logistic_service_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_logistic_service_group"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_organization_property"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/organization_property"
+                    android:textColor="@color/green"
+                    android:textSize="15sp" />
+
+                <TextView
+                   
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                  
+                 
+                 />
+
+                <TextView
+                 
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    
+                   
+                    />
+            </LinearLayout>
+            
+            
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
