@@ -45,7 +45,7 @@ public class NaviInfo implements Serializable{
 		infos.add(new NaviInfo(30.6820470000,104.1500250000,R.drawable.waiguoyuxueyuan,"外国语学院"));
 		infos.add(new NaviInfo(30.6833510000,104.1534370000,R.drawable.chuanbokexueyuyishuxueyuan,"传播科学与艺术学院"));
 		infos.add(new NaviInfo(30.6791740000,104.1463220000,R.drawable.tiyuguan,"体育馆"));
-		infos.add(new NaviInfo(30.6827840000,104.1491580000,R.drawable.tiyuguan,"医院"));
+		infos.add(new NaviInfo(30.6827840000,104.1491580000,R.drawable.yiyuan,"医院"));
 	}
 	
 	public double getLatitude() {

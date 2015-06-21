@@ -13,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
@@ -32,8 +31,19 @@ import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.MyLocationData;
+import com.baidu.mapapi.map.Overlay;
 import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
+import com.baidu.mapapi.overlayutil.TransitRouteOverlay;
+import com.baidu.mapapi.overlayutil.WalkingRouteOverlay;
+import com.baidu.mapapi.search.route.DrivingRoutePlanOption;
+import com.baidu.mapapi.search.route.DrivingRouteResult;
+import com.baidu.mapapi.search.route.OnGetRoutePlanResultListener;
+import com.baidu.mapapi.search.route.PlanNode;
+import com.baidu.mapapi.search.route.RoutePlanSearch;
+import com.baidu.mapapi.search.route.TransitRouteResult;
+import com.baidu.mapapi.search.route.WalkingRoutePlanOption;
+import com.baidu.mapapi.search.route.WalkingRouteResult;
 
 public class NaviLocationActivity extends Activity {
 
@@ -58,12 +68,33 @@ public class NaviLocationActivity extends Activity {
 	// 覆盖物相关
 	private BitmapDescriptor mMarker;
 	private RelativeLayout mMakerLayout;
-
+	// 导航
+	RoutePlanSearch mSearch =null; 
+	OnGetRoutePlanResultListener listener = new OnGetRoutePlanResultListener() {  
+	    public void onGetWalkingRouteResult(WalkingRouteResult result) {  
+	        //获取步行线路规划结果  
+	    	WalkingRouteOverlay overlay = new WalkingRouteOverlay(mBaiduMap);  
+	    	mBaiduMap.setOnMarkerClickListener(overlay);  
+            overlay.setData(result.getRouteLines().get(0));  
+            overlay.addToMap();  
+            overlay.zoomToSpan();  
+	    }  
+	    public void onGetTransitRouteResult(TransitRouteResult result) {  
+	        //获取公交换乘路径规划结果  
+	    }  
+	    public void onGetDrivingRouteResult(DrivingRouteResult result) {  
+	        //获取驾车线路规划结果  
+//	    	Toast.makeText(getApplicationContext(), "haha", Toast.LENGTH_SHORT).show();
+	    	
+	    }  
+	};
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		// 定位
 		SDKInitializer.initialize(getApplicationContext());
+//		mSearch.setOnGetRoutePlanResultListener(listener);
 		setContentView(R.layout.navi_location);
 		context = this;
 		iniMap();
@@ -85,19 +116,32 @@ public class NaviLocationActivity extends Activity {
 			public boolean onMarkerClick(Marker marker) {
 				// TODO Auto-generated method stub
 				Bundle extraInfo = marker.getExtraInfo();
-				NaviInfo info = (NaviInfo) extraInfo.getSerializable("info");
+				final NaviInfo info = (NaviInfo) extraInfo.getSerializable("info");
 				Log.i("info", info.getName());
 				ImageView iv = (ImageView) findViewById(R.id.maker_imageView);
-				TextView tvMarkerName = (TextView)findViewById(R.id.tv_info_name);
-				
+				TextView tvMarkerName = (TextView) findViewById(R.id.tv_info_name);
+
 				iv.setImageResource(info.getImgId());
 				tvMarkerName.setText(info.getName());
-				
-				
+				iv.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View arg0) {
+						// TODO Auto-generated method stub
+						LatLng latStNode = new LatLng(mLatitude, mLongtitude);
+						LatLng latEnNode = new LatLng(info.getLatitude(), info.getLongtitude());
+						PlanNode startNode = PlanNode.withLocation(latStNode);
+						PlanNode enNode = PlanNode.withLocation(latEnNode);
+						mSearch.walkingSearch((new WalkingRoutePlanOption())
+								.from(startNode)
+								.to(enNode));
+					}
+				});
 				return true;
 			}
 		});
 
+		
+		
 		mBaiduMap.setOnMapClickListener(new OnMapClickListener() {
 
 			@Override
@@ -109,10 +153,13 @@ public class NaviLocationActivity extends Activity {
 			@Override
 			public void onMapClick(LatLng arg0) {
 				// TODO Auto-generated method stub
-				
+
 			}
 		});
+		mSearch=RoutePlanSearch.newInstance();
+		mSearch.setOnGetRoutePlanResultListener(listener);
 	}
+	
 
 	private void initMarker() {
 		// TODO Auto-generated method stub
@@ -143,7 +190,6 @@ public class NaviLocationActivity extends Activity {
 
 		MapStatusUpdate msu = MapStatusUpdateFactory.newLatLng(latLng);
 		mBaiduMap.setMapStatus(msu);
-
 	}
 
 	private void iniLocation() {
@@ -229,6 +275,8 @@ public class NaviLocationActivity extends Activity {
 		super.onDestroy();
 		mapView.onDestroy();
 	}
+	
+	
 
 	public class MyLocationListener implements BDLocationListener {
 

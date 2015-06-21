@@ -2,14 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#90EE90"
+    android:background="#FFFFFF"
     android:orientation="vertical" >
-    
-	<TextView 
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="个人"
-	    />
-    
-    
+
+   
+    <ImageView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gerenjiaowuchutupian"
+        />
+    <Button 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_student"
+        android:text="教务处管理系统学生登陆"
+        />
+     <Button 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_teacher"
+        android:text="教务处管理系统教师登陆"
+        />
+
 </LinearLayout>

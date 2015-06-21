@@ -1,18 +1,24 @@
 package com.icdut.cdut;
 
-import com.icdut.cdut.school.SchoolContentActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.icdut.cdut.school.SchoolAdmissionActivity;
+import com.icdut.cdut.school.SchoolCampusCultureActivity;
+import com.icdut.cdut.school.SchoolContentActivity;
+import com.icdut.cdut.school.SchoolCultivationActivity;
+import com.icdut.cdut.school.SchoolDigitalCampusActivity;
+import com.icdut.cdut.school.SchoolDisciplineActivity;
+import com.icdut.cdut.school.SchoolFacultiesActivity;
+import com.icdut.cdut.school.SchoolOrganizationActivity;
+import com.icdut.cdut.school.SchoolScientificActivity;
 
 public class FragmentSchool extends Fragment implements OnClickListener {
 
@@ -92,32 +98,48 @@ public class FragmentSchool extends Fragment implements OnClickListener {
 		switch (v.getId()) {
 		case R.id.tv_introduction:
 			Toast.makeText(getActivity(), "学校概况", Toast.LENGTH_SHORT).show();	
-			Intent intent=new Intent(getActivity(),SchoolContentActivity.class);
-			startActivity(intent);
+			Intent intent1=new Intent(getActivity(),SchoolContentActivity.class);
+			startActivity(intent1);
 			break;
 		case R.id.tv_organization:
 			Toast.makeText(getActivity(), "组织机构", Toast.LENGTH_SHORT).show();
+			Intent intent2=new Intent(getActivity(),SchoolOrganizationActivity.class);
+			startActivity(intent2);
 			break;
 		case R.id.tv_faculties:
 			Toast.makeText(getActivity(), "师资队伍", Toast.LENGTH_SHORT).show();
+			Intent intent3=new Intent(getActivity(),SchoolFacultiesActivity.class);
+			startActivity(intent3);
 			break;
 		case R.id.tv_cultivation:
 			Toast.makeText(getActivity(), "人才培养", Toast.LENGTH_SHORT).show();
+			Intent intent4=new Intent(getActivity(),SchoolCultivationActivity.class);
+			startActivity(intent4);
 			break;
 		case R.id.tv_admission_employment:
 			Toast.makeText(getActivity(), "招生就业", Toast.LENGTH_SHORT).show();
+			Intent intent5=new Intent(getActivity(),SchoolAdmissionActivity.class);
+			startActivity(intent5);
 			break;
 		case R.id.tv_scientific_research:
 			Toast.makeText(getActivity(), "科学研究", Toast.LENGTH_SHORT).show();
+			Intent intent6=new Intent(getActivity(),SchoolScientificActivity.class);
+			startActivity(intent6);
 			break;
 		case R.id.tv_discipline_construction:
 			Toast.makeText(getActivity(), "学科建设", Toast.LENGTH_SHORT).show();
+			Intent intent7=new Intent(getActivity(),SchoolDisciplineActivity.class);
+			startActivity(intent7);
 			break;
 		case R.id.tv_digital_campus:
 			Toast.makeText(getActivity(), "数字校园", Toast.LENGTH_SHORT).show();
+			Intent intent8=new Intent(getActivity(),SchoolDigitalCampusActivity.class);
+			startActivity(intent8);
 			break;
 		case R.id.tv_campus_culture:
 			Toast.makeText(getActivity(), "校园文化", Toast.LENGTH_SHORT).show();
+			Intent intent9=new Intent(getActivity(),SchoolCampusCultureActivity.class);
+			startActivity(intent9);
 			break;
 
 		}

@@ -1,30 +1,30 @@
 package com.icdut.cdut.school;
 
-import com.icdut.cdut.R;
-
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-import android.os.Message;
-import android.view.KeyEvent;
-import android.webkit.WebSettings.LayoutAlgorithm;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+import android.widget.TextView;
+
+import com.icdut.cdut.R;
 
 public class SchoolContentActivity extends Activity{
+	
+	private TextView tv_introduction_content;
+	private  String textContent="		1956年3月15日，国务院批准建立成都地质勘探学院。同年3月27日，高等教育部和地质部联合发文，以重庆大学地质系、西北大学和南京大学地质系的工科部分为基础同时抽调北京地质学院、长春地质勘探学院部分干部教师组建成都地质勘探学院，建校当年即开始招收本科生。学校建校后陆续部分或成建制的迁入了原北京地质学院石油系和二系部分、三系整体。1960年，学校开始招收研究生。1983年，学校成为国家恢复学位制度后首批招收博士生的高校。成都地质勘探学院1958年更名为成都地质学院，1993年更名为成都理工学院，2001年由教育部批准组建成都理工大学（合并四川商业高等专科学校和有色金属地质职工大学）。学校由地质部、地质矿产部、国土资源部直属，2000年划转为中央与地方共建、以四川省人民政府管理为主的省属重点大学。\n" +
+			"		2010年11月3日，国土资源部与四川省人民政府签署共建成都理工大学协议。学校位于成都市市区，地理位置优越。\n" +
+			"		经过半个多世纪的建设与发展，学校已成为以理工为主，以地质、能源、资源科学、核技术、环境科学为优势，以化工、材料、电子、机械、信息科学、管理科学等学科专业为特色的多科性大学，拥有学士、硕士、博士三级学位授予权、教授和博士生导师资格审批权，是教育部“卓越工程师教育培养计划”高校。校本部现有在校本科生27567人，在校专科生1726人，在校博硕士研究生5621人。学校现有教职工3353人，其中，有教授（级）235人，副教授（级）546人。截止2015年3月，获得“全国杰出专业技术人才”称号2人，“国家级有突出贡献中青年专家”称号2人，“国家杰出青年科学基金”4人，“中国青年科技奖”5人，入选“长江学者奖励计划（特聘教授）”1人，“国家高层次人才特殊支持计划（百千万工程领军人才）”1人，“国家百千万人才工程人选”8人，“国务院学科评议组成员”3人，四川省“百人计划”5人，享受“国务院政府特殊津贴”96人，获得“四川省突出贡献优秀专家”称号29人，“四川省学术和技术带头人”称号43人，“四川省学术和技术带头人后备人选”称号97人， 全国优秀教师1人，国家教学名师1人，四川省教学名师7人，有1个国家级教学团队、1个教育部“长江学者和创新团队发展计划”团队、4个四川省科技创新团队和6个四川省教学团队，获国家教学成果奖5项。2007年，学校被教育部评为本科教学优秀单位。学校连续7次获得了“四川省高校毕业生就业工作先进集体”荣誉称号，还被评为“2011-2012年度全国毕业生就业典型经验高校”（全国五十强）。学校校园用地2890亩，建筑面积88万平方米，教学科研仪器设备总值5亿元。\n" +
+			"		学校现设16个教学学院、1个沉积地质研究院和1个地质调查研究院。设有80个本科专业，其中国家级特色专业8个，国家级专业综合改革项目4个，省级特色专业12个，省级专业综合改革试点项目12个；国家级“卓越工程师教育培养计划”试点专业（含独立招生方向）7个，省级“卓越工程师教育培养计划”试点专业18个。拥有5个一级学科博士学位授权点、36个二级学科博士学位授权点，有19个一级学科硕士学位授权点、119个二级学科硕士学位授权点（含硕士专业学位招生领域），学科专业涵盖理、工、文、管、经、法、哲、农、教、艺等10大学科门类。有1个一级学科国家重点学科、3个二级学科国家重点学科、1个国家重点（培育）学科、15个省级重点学科。有3个国家级实验教学示范中心、1个国家级虚拟仿真实践教学中心、6个省级实验教学示范中心，3个国家级工程实践教育中心，2个省级人才培养模式创新实验区，8个省级本科人才培养基地，2个国家大学生校外实践教育基地，2个省级大学生校外实践教育基地，是国家级大学生创新创业计划实施学校。有2门国家精品课程，2门国家精品资源共享课程，34门省级精品课程，15门省级精品开放课程，13门省级精品资源共享课程。\n" +
+			"		学校是国家重要的高层次人才培养与科学研究基地，现有2个国家重点实验室（地质灾害防治与地质环境保护国家重点实验室、油气藏地质及开发工程国家重点实验室）、2个我校牵头建设的“四川2011协同创新中心”、2个四川省重点实验室、1个教育部与四川省联合共建重点实验室、1个四川省哲学社会科学重点研究基地、1个四川省哲学社会科学普及基地、2个国土资源部重点实验室、2个国土资源部野外科学观测研究基地、1个四川省高校重点实验室、1个四川省环保厅重点实验室和4个博士后科研流动站。\n" +
+			"		学校积极参与西电东送、西气东输、南水北调、青藏铁路、油气地质勘探、能源开发、大型水电、区域及城市环境以及大型交通基础设施等工程建设，先后承担了国家重大科技专项、国家科技支撑计划、国家自然科学基金、国家“863”计划、国家“973”计划、国家社科基金、国家地调计划等一大批重要项目。截止2014年，学校累计获得国家和省部级科技奖853项（次），其中包括国家科技进步特等奖、国家科技进步一等奖、中国国际科技合作奖、国家自然科学二等奖、中国专利奖金奖、国家技术发明三等奖、四川省科技进步一等奖和四川省社会科学优秀成果一等奖等奖项；申请专利948项，其中授权452项。\n" +
+			"		学校是国家大学生文化素质教育基地，学校学生积极参加科技文化活动，大学生社会实践活动10次获得中宣部、团中央表彰。在“挑战杯”大学生课外科技作品竞赛中获得国家二等奖5项、三等奖7项、科技进步奖（交叉创新奖）2项，获省一等奖12项、二等奖24项、三等奖22项；在“挑战杯”大学生创业计划竞赛中获得全国银奖1项、铜奖3项，省一等奖9项、二等奖11项、三等奖27项；在数学建模竞赛中获国际赛Meritorious Winner奖24人次、Honorable Mention奖48人次、Successful Participant奖72人次，全国一等奖21人次、二等奖30人次，省级一等奖72人次、二等奖72人次、三等奖93人次；在各类大学生体育赛事中获得全国奖励53项（次），省级奖励61项（次）；在全国、省市级各类大学生艺术专业比赛中获得奖励124项（次）。\n" +
+			"		学校重视对外交流与合作，先后与英国、加拿大、俄罗斯、美国、澳大利亚、新西兰、荷兰、意大利等国家的60余所大学和科研机构建立了交流合作关系。现与英国斯泰福厦大学、知山大学举办4项中外合作办学项目。接待了来自40多个国家和地区的2500余名外国专家及留学生来校讲学、留学，出访600余人次，开展了300余项科研合作。学校还多次主办国际型学术会议。\n" +
+			"		学校现有成都理工大学工程技术学院、成都理工大学广播影视学院两所独立学院和多个联合办学点，与资源、能源、环境、建筑、军工和高技术等领域的国家大型企业或科研院所建立了长期的产学研合作关系。\n" +
+			"		学校现有6个教学辅助单位。其中，学校拥有一座在西部乃至全国享有较高知名度的以地学类藏品为主的自然博物馆，馆藏标本丰富，其中拥有国家级及世界级的精品和珍品，如“合川马门溪龙”、“大竹重庆鱼”、“隆昌铁陨石”等。博物馆获得包括区、市、省、国家所有级别的科普教育和爱国主义教育基地称号。学校新图书馆建筑面积41000平方米，图书馆馆藏印刷型书刊203万册，拥有数字资源数据库60多个，电子图书228万册，电子期刊2.6万种。图书馆实行“藏、借、阅、咨一体化”的开放服务模式，实现了印刷型文献与数字化信息的和谐统一，馆内建有国土资源西南地区科技查新站和四川省高等学校文献传递服务中心。学校档案馆馆藏丰富、管理规范，是达到“科技事业单位档案管理国家一级”标准的高校档案馆。学校主办学术期刊6种，其中有CSCD核心期刊2种、中文核心期刊3种、中国科技核心期刊4种。\n" +
+			"		学校以服务国家、行业、服务地方区域经济为己任，迄今已为社会输送了15万余名毕业生。他们中涌现出一批在国内外有一定知名度的学者和专家，其中有两院院士3人（其中，多吉院士为中国工程院第一个藏族院士、西藏自治区人大常委会副主任）、“国家杰出青年科学基金”获得者9人、“长江学者奖励计划”2人、国家科学技术进步特等奖和全国“五一劳动奖章”获得者多人。一大批毕业生在中央和地方各级政府、部门、国土资源、勘察、地质、石油（能源）等行业为我国经济建设和社会发展作出了重要贡献，其出色业绩受到社会的普遍认可。\n" +
+			"		学校在长期的办学实践中形成了“不甘人后、敢为人先”的进取精神、“穷究于理、成就于工”的治学理念和“艰苦奋斗、奋发图强”的优良传统。\n" +
+			"		在四川省委、省政府的领导下，在国土资源部与四川省人民政府共建的平台上，全校上下正齐心协力、抢抓机遇、攻坚克难，以豪迈的热情和高昂的斗志，努力建设优势特色显著的高水平大学！\n";
+			;
+	
 
-	private final String URL="http://www.cdut.edu.cn/type/0203000117.html";
-	
-	private WebView webView;
-	private Handler handler=new Handler(){
-		public void handleMessage(android.os.Message msg) {
-			//载入网路信息
-			WebView webV=(WebView) msg.obj;
-			setContentView(webV);
-		};
-	};
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -34,59 +34,9 @@ public class SchoolContentActivity extends Activity{
 	}
 
 	private void init() {
-		// TODO Auto-generated method stub
-		webView=(WebView) findViewById(R.id.webView);
-		webView=new WebView(this);
-//		webView.getSettings().setJavaScriptEnabled(true);
-		// 设置可以支持缩放 
-		webView.getSettings().setSupportZoom(true); 
-		//自适应屏幕
-		webView.getSettings().setLayoutAlgorithm(LayoutAlgorithm.SINGLE_COLUMN);
-		webView.getSettings().setLoadWithOverviewMode(true);
-		new Thread(){
-			public void run() {
-				//载入网路信息
-				Looper.prepare();
-				webView.loadUrl(URL);
-				Message message=new Message();
-				message.obj=webView;
-				handler.sendMessage(message);
-				Looper.loop();
-			};
-		}.start();
-		webView.setWebViewClient(new HelloWebViewClient());
+		tv_introduction_content=(TextView) findViewById(R.id.tv_introducation_content);
+		tv_introduction_content.setText(textContent);
 	}
 	
-	//在webView中点击超链接
-	private class HelloWebViewClient extends WebViewClient{
-		@Override
-		public boolean shouldOverrideUrlLoading(WebView view, String url) {
-			// TODO Auto-generated method stub
-			final WebView webView=view;
-			final String urlNew=url;
-			new Thread(){
-				public void run() {
-					//载入网路信息
-					Looper.prepare();
-					webView.loadUrl(urlNew);
-					Message message=new Message();
-					message.obj=webView;
-					handler.sendMessage(message);
-					Looper.loop();
-				};
-			}.start();
-			return true;
-		}
-	}
 	
-	//重写返回
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		// TODO Auto-generated method stub
-		if ((keyCode == KeyEvent.KEYCODE_BACK) && webView.canGoBack()) { 
-			webView.goBack(); //goBack()表示返回WebView的上一页面 
-            return true; 
-        } 
-        return  super.onKeyDown(keyCode, event); 
-	}
 }

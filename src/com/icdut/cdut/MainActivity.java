@@ -46,19 +46,19 @@ public class MainActivity extends FragmentActivity {
 	public MyOnClick myclick;
 	public MyPageChangeListener myPageChange;
 
-	public FragmentManager fManager=getSupportFragmentManager();
+	public FragmentManager fManager = getSupportFragmentManager();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+
 		initViewPager();
 		initView();
 		initState();
 	}
 
-	//初始化第一个text默认选中颜色改变
+	// 初始化第一个text默认选中颜色改变
 	private void initState() {
 		tv_school.setTextColor(GREEN);
 		viewPager.setCurrentItem(SCHOOL_FRAGMENT);
@@ -78,9 +78,9 @@ public class MainActivity extends FragmentActivity {
 	}
 
 	private void initView() {
-		
-		myclick = new MyOnClick();  
-        myPageChange = new MyPageChangeListener();
+
+		myclick = new MyOnClick();
+		myPageChange = new MyPageChangeListener();
 		// 绑定控件
 		viewPager = (ViewPager) findViewById(R.id.vPager);
 		school_layout = (RelativeLayout) findViewById(R.id.school_layout);
@@ -102,18 +102,16 @@ public class MainActivity extends FragmentActivity {
 	}
 
 	public class MyOnClick implements OnClickListener {
-
 		@Override
 		public void onClick(View view) {
 			// TODO Auto-generated method stub
 			clearChioce();
 			iconChange(view.getId());
 		}
-
 	}
 
 	public class MyPageChangeListener implements OnPageChangeListener {
-
+		//当进行滑动操作
 		@Override
 		public void onPageScrollStateChanged(int arg0) {
 			// TODO Auto-generated method stub
@@ -123,19 +121,14 @@ public class MainActivity extends FragmentActivity {
 				iconChange(i);
 			}
 		}
-
 		@Override
 		public void onPageScrolled(int arg0, float arg1, int arg2) {
 			// TODO Auto-generated method stub
-
 		}
-
 		@Override
 		public void onPageSelected(int arg0) {
 			// TODO Auto-generated method stub
-
 		}
-
 	}
 
 	@Override
@@ -145,6 +138,7 @@ public class MainActivity extends FragmentActivity {
 		return true;
 	}
 
+	//点击底部菜单不同或者滑动不同的菜单那，底部字的变化
 	public void iconChange(int id) {
 		// TODO Auto-generated method stub
 		switch (id) {

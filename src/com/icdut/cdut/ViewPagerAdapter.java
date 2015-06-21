@@ -14,10 +14,11 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 		super(fm);
 		// TODO Auto-generated constructor stub
 	}
-	public ViewPagerAdapter(FragmentManager fm, ArrayList<Fragment> fragment) {  
-        super(fm);  
-        this.fragmentList = fragment;  
-    }  
+
+	public ViewPagerAdapter(FragmentManager fm, ArrayList<Fragment> fragment) {
+		super(fm);
+		this.fragmentList = fragment;
+	}
 
 	@Override
 	public Fragment getItem(int index) {
@@ -30,6 +31,4 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 		// TODO Auto-generated method stub
 		return fragmentList.size();
 	}
-
-	
 }
